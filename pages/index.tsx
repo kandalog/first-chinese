@@ -1,8 +1,4 @@
-import {
-  roadQuestions2,
-  roadQuestions3,
-  roadQuestions4,
-} from "@/assets/question";
+import { questions } from "@/assets/question";
 import styled from "@/styles/Home.module.scss";
 import { useQuestion } from "../hooks/useQuestion";
 import { Button } from "@/components/Button";
@@ -18,9 +14,7 @@ export default function Home() {
     reverseQuestion,
     pin,
     reset,
-    changeToRemind,
-    setQuestions,
-    changeToroad,
+    changeQuestion,
   } = useQuestion();
 
   const introductionHandler = () => {
@@ -51,23 +45,9 @@ export default function Home() {
 
       <div className={styled.inner}>
         {/* changeボタン */}
-        <Button text="F" name={"remind"} onClick={changeToRemind} />
-        <Button text="R1" name={"road"} onClick={changeToroad} />
-        <Button
-          text="R2"
-          name={"road2"}
-          onClick={() => setQuestions(roadQuestions2)}
-        />
-        <Button
-          text="R3"
-          name={"road3"}
-          onClick={() => setQuestions(roadQuestions3)}
-        />
-        <Button
-          text="R4"
-          name={"road4"}
-          onClick={() => setQuestions(roadQuestions4)}
-        />
+        <Button text="1" name={"first"} onClick={() => changeQuestion(1)} />
+        <Button text="2" name={"second"} onClick={() => changeQuestion(2)} />
+
         {questions.map((question) => (
           <div key={question.pi} className={styled.question}>
             <p onClick={(e) => handleOnClick(e)}>{question.pi}</p>

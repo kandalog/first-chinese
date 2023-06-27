@@ -1,8 +1,4 @@
-import {
-  questions as materialQuestion,
-  remindQuestion,
-  roadQuestions,
-} from "@/assets/question";
+import { questions as materialQuestion, questions2 } from "@/assets/question";
 import { useState } from "react";
 
 export const useQuestion = () => {
@@ -56,20 +52,30 @@ export const useQuestion = () => {
       return newState;
     });
   };
+
   // reset
   const reset = () => {
     setQuestions(materialQuestion);
   };
 
-  // 復習モード
-  function changeToRemind() {
-    setQuestions(remindQuestion);
-  }
+  // ページ番号に応じた問題に切り替える
+  const changeQuestion = (num: number) => {
+    let result;
 
-  // 中国語への道
-  function changeToroad() {
-    setQuestions(roadQuestions);
-  }
+    switch (num) {
+      case 1:
+        result = materialQuestion;
+        break;
+      case 2:
+        result = questions2;
+        break;
+      default:
+        alert("存在しないページ番号です");
+        return;
+    }
+
+    setQuestions(result);
+  };
 
   return {
     handleOnClick,
@@ -79,9 +85,8 @@ export const useQuestion = () => {
     shuffleButton,
     reverseQuestion,
     pin,
-    changeToRemind,
     reset,
-    changeToroad,
+    changeQuestion,
   };
 };
 
