@@ -1,5 +1,5 @@
 export const pinyin4 = [
-  "Shéi",
+  "shéi",
   "nǎ'er",
   "shénme",
   "zěnme",

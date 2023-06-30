@@ -10,11 +10,6 @@ type questionType = {
   en?: string;
 };
 
-// export const roadQuestions: questionType[] = [];
-// export const roadQuestions2: questionType[] = [];
-// export const roadQuestions3: questionType[] = [];
-// export const roadQuestions4: questionType[] = [];
-
 export const questions: questionType[] = [];
 export const questions2: questionType[] = [];
 export const questions3: questionType[] = [];
