@@ -1,4 +1,9 @@
-import { questions as materialQuestion, questions2 } from "@/assets/question";
+import {
+  questions as materialQuestion,
+  questions2,
+  questions3,
+  questions4,
+} from "@/assets/question";
 import { useState } from "react";
 
 export const useQuestion = () => {
@@ -68,6 +73,12 @@ export const useQuestion = () => {
         break;
       case 2:
         result = questions2;
+        break;
+      case 3:
+        result = questions3;
+        break;
+      case 4:
+        result = questions4;
         break;
       default:
         alert("存在しないページ番号です");

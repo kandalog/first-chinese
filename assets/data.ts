@@ -25,6 +25,9 @@ export const pinyin = [
   "yī diǎn",
   "Shíyī diǎn",
   "shí'èr diǎn",
+  "Gàosù",
+  "wèn",
+  "gěi",
 ];
 
 export const en = [
@@ -54,6 +57,9 @@ export const en = [
   "yi dian",
   "shi yi dian",
   "shi'er dian",
+  "gaosu",
+  "wen",
+  "gei",
 ];
 
 export const ch = [
@@ -83,6 +89,9 @@ export const ch = [
   "一点",
   "十一点",
   "十二点",
+  "告诉",
+  "问",
+  "给",
 ];
 
 export const jp = [
@@ -112,4 +121,7 @@ export const jp = [
   "1時",
   "11時",
   "12時",
+  "教える",
+  "問う",
+  "あげる",
 ];

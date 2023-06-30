@@ -47,6 +47,8 @@ export default function Home() {
         {/* changeボタン */}
         <Button text="1" name={"first"} onClick={() => changeQuestion(1)} />
         <Button text="2" name={"second"} onClick={() => changeQuestion(2)} />
+        <Button text="3" name={"third"} onClick={() => changeQuestion(3)} />
+        <Button text="4" name={"forth"} onClick={() => changeQuestion(4)} />
 
         {questions.map((question) => (
           <div key={question.pi} className={styled.question}>
