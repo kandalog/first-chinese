@@ -15,6 +15,7 @@ export default function Home() {
     pin,
     reset,
     changeQuestion,
+    japaneseMode,
   } = useQuestion();
 
   const introductionHandler = () => {
@@ -31,8 +32,10 @@ export default function Home() {
       <header className={styled.header}>
         <Button text="I" name={"reset"} onClick={reset} />
         <Button text="R" name={"reverse"} onClick={reverseQuestion} />
+        <Button text="J" name={"japanese"} onClick={japaneseMode} />
         <Button text="P" name={"pin"} onClick={pin} />
         <Button text="S" name={"shuffle"} onClick={shuffleButton} />
+
         {/* 説明文表示・非表示 */}
         <button
           id="introButton"

@@ -58,6 +58,25 @@ export const useQuestion = () => {
     });
   };
 
+  // 日本語モード
+  const japaneseMode = () => {
+    // ピンインモードの場合は起動させない
+    if (!questions[0].en) return;
+    setQuestions((prevState) => {
+      let i = 0;
+      const newState = prevState.map((data) => {
+        i++;
+        return {
+          jp: data.pi,
+          ch: data.ch,
+          pi: data.jp,
+          en: data.ch,
+        };
+      });
+      return newState;
+    });
+  };
+
   // reset
   const reset = () => {
     setQuestions(materialQuestion);
@@ -98,6 +117,7 @@ export const useQuestion = () => {
     pin,
     reset,
     changeQuestion,
+    japaneseMode,
   };
 };
 
