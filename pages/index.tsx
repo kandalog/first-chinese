@@ -55,7 +55,7 @@ export default function Home() {
 
         {questions.map((question) => (
           <div key={question.pi} className={styled.question}>
-            <p onClick={(e) => handleOnClick(e)}>{question.pi}</p>
+            <p onClick={(e) => handleOnClick(e)}>{question.jp}</p>
             <div
               className={styled.hidden}
               onClick={(e) => removeActiveClass(e)}
@@ -64,7 +64,7 @@ export default function Home() {
                 {question.ch && "CH:"} {question.ch}
               </p>
               <p>
-                {question.jp && "JP:"} {question.jp}
+                {question.jp && "PI:"} {question.pi}
               </p>
             </div>
           </div>
