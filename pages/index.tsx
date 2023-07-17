@@ -30,10 +30,16 @@ export default function Home() {
     <>
       <Introduction />
       <header className={styled.header}>
-        <Button text="I" name={"reset"} onClick={reset} />
-        <Button text="R" name={"reverse"} onClick={reverseQuestion} />
-        <Button text="J" name={"japanese"} onClick={japaneseMode} />
-        <Button text="P" name={"pin"} onClick={pin} />
+        {/* <Button text="I" name={"reset"} onClick={reset} />
+        <Button text="S" name={"shuffle"} onClick={shuffleButton} /> */}
+        {/* <Button text="R" name={"reverse"} onClick={reverseQuestion} /> */}
+        {/* <Button text="J" name={"japanese"} onClick={japaneseMode} /> */}
+        {/* <Button text="P" name={"pin"} onClick={pin} /> */}
+        {/* <Button text="I" name={"reset"} onClick={reset} /> */}
+        <Button text="1" name={"butn"} onClick={() => changeQuestion(1)} />
+        <Button text="2" name={"btn"} onClick={() => changeQuestion(2)} />
+        <Button text="3" name={"btn"} onClick={() => changeQuestion(3)} />
+        <Button text="4" name={"btn"} onClick={() => changeQuestion(4)} />
         <Button text="S" name={"shuffle"} onClick={shuffleButton} />
 
         {/* 説明文表示・非表示 */}
@@ -48,10 +54,10 @@ export default function Home() {
 
       <div className={styled.inner}>
         {/* changeボタン */}
-        <Button text="1" name={"first"} onClick={() => changeQuestion(1)} />
+        {/* <Button text="1" name={"first"} onClick={() => changeQuestion(1)} />
         <Button text="2" name={"second"} onClick={() => changeQuestion(2)} />
         <Button text="3" name={"third"} onClick={() => changeQuestion(3)} />
-        <Button text="4" name={"forth"} onClick={() => changeQuestion(4)} />
+        <Button text="4" name={"forth"} onClick={() => changeQuestion(4)} /> */}
 
         {questions.map((question) => (
           <div key={question.pi} className={styled.question}>
