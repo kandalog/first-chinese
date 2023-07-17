@@ -36,10 +36,12 @@ export default function Home() {
         {/* <Button text="J" name={"japanese"} onClick={japaneseMode} /> */}
         {/* <Button text="P" name={"pin"} onClick={pin} /> */}
         {/* <Button text="I" name={"reset"} onClick={reset} /> */}
-        <Button text="1" name={"butn"} onClick={() => changeQuestion(1)} />
+        <Button text="1" name={"bun"} onClick={() => changeQuestion(1)} />
         <Button text="2" name={"btn"} onClick={() => changeQuestion(2)} />
         <Button text="3" name={"btn"} onClick={() => changeQuestion(3)} />
         <Button text="4" name={"btn"} onClick={() => changeQuestion(4)} />
+        <Button text="5" name={"btn"} onClick={() => changeQuestion(5)} />
+        <Button text="6" name={"btn"} onClick={() => changeQuestion(6)} />
         <Button text="S" name={"shuffle"} onClick={shuffleButton} />
 
         {/* 説明文表示・非表示 */}

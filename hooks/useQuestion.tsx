@@ -3,6 +3,8 @@ import {
   questions2,
   questions3,
   questions4,
+  questions5,
+  questions6,
 } from "@/assets/question";
 import { useState } from "react";
 
@@ -98,6 +100,12 @@ export const useQuestion = () => {
         break;
       case 4:
         result = questions4;
+        break;
+      case 5:
+        result = questions5;
+        break;
+      case 6:
+        result = questions6;
         break;
       default:
         alert("存在しないページ番号です");
